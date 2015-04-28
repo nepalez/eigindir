@@ -2,6 +2,7 @@
 
 require_relative "eigindir/patches"
 require_relative "eigindir/coercer"
+require_relative "eigindir/api"
 
 # Module Eigindir provides PORO attributes declaration and coersion
 #
@@ -19,5 +20,11 @@ require_relative "eigindir/coercer"
 # @author Andrew Kozin <Andrew.Kozin@gmail.com>
 #
 module Eigindir
+
+  # @!parse extend Eigindir::API
+  # @private
+  def self.included(klass)
+    klass.extend API
+  end
 
 end # module Eigindir
