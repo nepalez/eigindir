@@ -1,6 +1,7 @@
 # encoding: utf-8
 
 require_relative "eigindir/patches"
+require_relative "eigindir/coercer"
 
 # Module Eigindir provides PORO attributes declaration and coersion
 #
