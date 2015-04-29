@@ -53,11 +53,17 @@ module Eigindir
     private
 
     def __readers
-      @__readers ||= []
+      @__readers ||= begin
+        default = superclass.send :__readers if superclass.is_a? Eigindir::API
+        default || []
+      end
     end
 
     def __writers
-      @__writers ||= []
+      @__writers ||= begin
+        default = superclass.send :__writers if superclass.is_a? Eigindir::API
+        default || []
+      end
     end
 
     def __declare_reader(name, coercer)
