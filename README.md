@@ -65,8 +65,30 @@ class Foo
 end
 ```
 
-Details
--------
+Installation
+------------
+
+Add this line to your application's Gemfile:
+
+```ruby
+# Gemfile
+gem "eigindir"
+```
+
+Then execute:
+
+```
+bundle
+```
+
+Or add it manually:
+
+```
+gem install eigindir
+```
+
+Usage
+-----
 
 ### Base Use
 
@@ -282,34 +304,6 @@ foo.instance_eval "@baz" # => 1
 foo.baz # => 1
 ```
 
-Credits
--------
-
-Many thanks to Icelandic for
-[the name of the module](https://translate.google.ru/?hl=en#is/en/eigindir).
-
-Installation
-------------
-
-Add this line to your application's Gemfile:
-
-```ruby
-# Gemfile
-gem "eigindir"
-```
-
-Then execute:
-
-```
-bundle
-```
-
-Or add it manually:
-
-```
-gem install eigindir
-```
-
 Compatibility
 -------------
 
@@ -335,6 +329,12 @@ Contributing
   (if you want to have your own version, that is fine but bump version
   in a commit by itself I can ignore when I pull)
 * Send me a pull request. Bonus points for topic branches.
+
+Credits
+-------
+
+Many thanks to Icelandic for
+[the name of the module](https://translate.google.ru/?hl=en#is/en/eigindir).
 
 License
 -------
