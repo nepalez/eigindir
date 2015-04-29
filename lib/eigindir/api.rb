@@ -54,15 +54,13 @@ module Eigindir
 
     def __readers
       @__readers ||= begin
-        default = superclass.send :__readers if superclass.is_a? Eigindir::API
-        default || []
+        (superclass.send(:__readers).dup if superclass.is_a? Eigindir::API).to_a
       end
     end
 
     def __writers
       @__writers ||= begin
-        default = superclass.send :__writers if superclass.is_a? Eigindir::API
-        default || []
+        (superclass.send(:__writers).dup if superclass.is_a? Eigindir::API).to_a
       end
     end
 

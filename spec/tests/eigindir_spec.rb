@@ -55,8 +55,13 @@ describe Eigindir do
     it "returns attributes defined in superclass" do
       parent   = Class.new { include Eigindir }
       parent.attribute :foo, coerce: ->(_) { 1 }, strict: true
-      instance = Class.new(parent).new
-      expect(instance.attributes).to eq(foo: 1)
+      klass    = Class.new(parent) { attribute :bar }
+
+      pater = parent.new
+      child = klass.new
+
+      expect(pater.attributes).to eq(foo: 1)
+      expect(child.attributes).to eq(foo: 1, bar: nil)
     end
 
   end # describe #attributes
