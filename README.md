@@ -235,7 +235,7 @@ Because `nil` stands for *nothing*, it is not coerced by default:
 class Foo
   include Eigindir
 
-  attribute :bar, coerce: &:to_s
+  attribute :bar, coerce: ->(value) { value.to_s }
 end
 
 foo = Foo.new
@@ -250,7 +250,7 @@ Use `strict: true` option to coerce `nil` as well:
 class Foo
   include Eigindir
 
-  attribute :baz, coerce: &:to_s, strict: true
+  attribute :baz, coerce: ->(value) { value.to_s }, strict: true
 end
 
 foo = Foo.new
