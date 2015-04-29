@@ -229,7 +229,7 @@ foo.bar # => "11"
 
 ### Coersion of nil
 
-Because +nil+ stands for pure nothing, it is not coerced by default:
+Because `nil` stands for *nothing*, it is not coerced by default:
 
 ```ruby
 class Foo
