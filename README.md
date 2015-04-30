@@ -249,6 +249,17 @@ foo.instance_eval "@bar" # => 11
 foo.bar # => "11"
 ```
 
+You can use `writer` coersion to control value type in a [defensive way]:
+
+```ruby
+class Foo
+  include Eigindir
+  attribute :bar, writer: ->(value) { value.is_a? Bar ? value : fail(TypeError) }
+end
+```
+
+[defensive way]: http://www.erlang.se/doc/programming_rules.shtml#HDR11
+
 ### Coersion of nil
 
 Because `nil` stands for *nothing*, it is not coerced by default:
