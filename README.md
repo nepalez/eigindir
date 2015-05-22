@@ -351,3 +351,7 @@ License
 -------
 
 See the [MIT LICENSE](LICENSE).
+
+
+[![Bitdeli Badge](https://d2weczhvl823v0.cloudfront.net/nepalez/eigindir/trend.png)](https://bitdeli.com/free "Bitdeli Badge")
+
