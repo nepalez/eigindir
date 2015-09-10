@@ -14,8 +14,11 @@ Eigindir
 [gemnasium]: https://gemnasium.com/nepalez/eigindir
 [travis]: https://travis-ci.org/nepalez/eigindir
 [inch]: https://inch-ci.org/github/nepalez/eigindir
+[attributes_dsl]: https://github.com/nepalez/attributes_dsl
 
 Coercible PORO attributes.
+
+**The gem is not supported any longer. Look at the [Attributes DSL][attributes_dsl] instead**
 
 Synopsis
 --------
